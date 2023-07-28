@@ -10,7 +10,8 @@ const businessMathActions=require('./features/math/businessMathSlice').businessM
 console.log('initial state:', store.getState())
 
 const unsubscribe = store.subscribe(()=>{
-    console.log('updated state:', store.getState())
+    //console.log('updated state:', store.getState())
+    //logger middleware added to store to replace above console log
 })
 
 //dispatch actions on store
