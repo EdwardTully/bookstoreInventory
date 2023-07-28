@@ -1,4 +1,5 @@
 const store = require('./app/store')
+const { promotionActions } = require('./features/promos/promotionSlice')
 const bio101Actions = require('./features/biology/bio101Slice').bio101Actions
 const bio102Actions = require('./features/biology/bio102Slice').bio102Actions
 const cellBioActions = require('./features/biology/cellBio201Slice').cellBioActions
@@ -15,15 +16,12 @@ const unsubscribe = store.subscribe(()=>{
 //dispatch actions on store
 
 store.dispatch(bio101Actions.sold(2))
-store.dispatch(bio102Actions.sold(5))
-store.dispatch(westCivActions.restock(10))
+
 store.dispatch(bio101Actions.sold(5))
 store.dispatch(bio101Actions.sold(7))
 store.dispatch(bio101Actions.sold(15))
 store.dispatch(bio101Actions.restock(15))
-store.dispatch(cellBioActions.sold(5))
-store.dispatch(americanActions.restock(200))
-store.dispatch(businessMathActions.sold(2))
+store.dispatch(promotionActions.restock(20))
 
 unsubscribe()
 

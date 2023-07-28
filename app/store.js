@@ -5,6 +5,7 @@ const cellBioReducer = require('../features/biology/cellBio201Slice')
 const westCivReducer = require('../features/history/westCivSlice')
 const americanReducer = require('../features/history/american18Slice')
 const businessMathReducer = require('../features/math/businessMathSlice')
+const promotionReducer = require('../features/promos/promotionSlice')
 
 
 const store = configureStore({
@@ -15,6 +16,7 @@ const store = configureStore({
         westCiv: westCivReducer,
         american: americanReducer,
         bsnMath: businessMathReducer,
+        promos: promotionReducer
     }
 })
 
